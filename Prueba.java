@@ -4,9 +4,9 @@ import org.junit.Test;
 
 public class Prueba {
 
-	private BinaryString bitset1, bitset2, bitset3, bitset4;
+	private BinaryString bitset1, bitset2, bitset3, bitset4, bitset5;
 	private String pruebaString2 = "1010101010", pruebaString3 = "100101",
-			pruebaString4 = "0110101";
+			pruebaString4 = "0110101", pruebaString5 = "1111000";
 
 	// Para cada Test inicializamos antes su correspondiente bitset con su
 	// String asociado.
@@ -16,6 +16,7 @@ public class Prueba {
 		bitset2 = new BinaryString(pruebaString2);
 		bitset3 = new BinaryString(pruebaString3);
 		bitset4 = new BinaryString(pruebaString4);
+		bitset5 = new BinaryString(pruebaString5);
 	}
 
 	// Comprobamos si al inicar el bitset (con los dos constructores) el tamaño
@@ -55,5 +56,10 @@ public class Prueba {
 	@Test(expected = BinaryStringException.class)
 	public void testInvalidBitValue() {
 		bitset4.set(1, 'a');
+	}
+
+	@Test
+	public void testToString() {
+		assertEquals(" 1111000", bitset5.toString());
 	}
 }
