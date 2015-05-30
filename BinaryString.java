@@ -30,7 +30,11 @@ public class BinaryString {
 	}
 
 	public char get(int index) {
-		return bits[index];
+		if (index < 0 || index >= bits.length) {
+			throw new BinaryStringException();
+		} else {
+			return bits[index];
+		}
 	}
 
 	public String toString() {
