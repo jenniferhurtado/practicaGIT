@@ -29,7 +29,7 @@ public class BinaryString {
 		bits[index] = value;
 	}
 
-	public char get(int index, char value) {
+	public char get(int index) {
 		return bits[index];
 	}
 
