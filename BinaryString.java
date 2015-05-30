@@ -28,6 +28,8 @@ public class BinaryString {
 	public void set(int index, char value) {
 		if (index < 0 || index >= bits.length) {
 			throw new BinaryStringException();
+		} else if (value != '1' && value != '0') {
+			throw new BinaryStringException();
 		} else {
 			bits[index] = value;
 		}

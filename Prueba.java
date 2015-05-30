@@ -51,4 +51,9 @@ public class Prueba {
 
 		}
 	}
+
+	@Test(expected = BinaryStringException.class)
+	public void testInvalidBitValue() {
+		bitset4.set(1, 'a');
+	}
 }
