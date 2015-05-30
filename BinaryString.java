@@ -23,10 +23,14 @@ public class BinaryString {
 
 	public int length() {
 		return bits.length;
-	};
+	}
 
 	public void set(int index, char value) {
-		bits[index] = value;
+		if (index < 0 || index >= bits.length) {
+			throw new BinaryStringException();
+		} else {
+			bits[index] = value;
+		}
 	}
 
 	public char get(int index) {
